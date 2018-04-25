@@ -11,8 +11,9 @@ App({
     wx.login({
       success: function (res) {
         if (res.code) {
+
           wx.request({
-            url: 'https://nywc.moontell.cn/api/weixin/memberinfo?js_code=' + res.code,
+            url: 'https://nywc.moontell.cn/api/member/getinfo?js_code=' + res.code,
             method: "get",
             success: function (openIdRes) {
               

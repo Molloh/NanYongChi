@@ -4,6 +4,7 @@
     <block>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarURL}}" background-size="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <button bindgetuserinfo='setUserInfo' open-type='getUserInfo' >更新用户信息(我想把这个按钮弄得很小)</button>
     </block>
   </view>
   <view class="usermotto">
