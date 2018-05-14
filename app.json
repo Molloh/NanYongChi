@@ -1,12 +1,14 @@
 {
-  "pages":[
-    "pages/home/home",
+  "pages": [
+    "pages/index/index",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "backgroundTextStyle": "white",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "NanYongChi",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#F2f2f2",
+    "enablePullDownRefresh": true
   }
 }
