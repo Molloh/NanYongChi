@@ -1,21 +1,15 @@
 //index.js
 //获取应用实例
 var app = getApp();
+
 Page({
   data: {
     animationData: {},
-    cardInfoList: [{
-      cardUrl: 'http://ww1.sinaimg.cn/large/006k2f85ly1frb5zwonrzj32801e0t97.jpg',
-      cardInfo: 'test1',
-    }, {
-      cardUrl: 'http://ww1.sinaimg.cn/large/006k2f85ly1frb5zwonrzj32801e0t97.jpg',
-      cardInfo: 'test2',
-    }, {
-      cardUrl: 'http://ww1.sinaimg.cn/large/006k2f85ly1frb5zwonrzj32801e0t97.jpg',
-      cardInfo: 'test3',
-    }]
+    cardInfoList: []
   },
+
   //事件处理函数
+
   slidethis: function(e) {
     console.log(e);
     var animation = wx.createAnimation({
@@ -39,21 +33,42 @@ Page({
       });
     }, 350);
   },
-  onLoad: function () {
-    //获取用户信息（原来的代码无效）
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo
-      })
-    } else {
-      // 由于 请求getinfo接口 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.data
+
+  onLoad: function() {
+    let that = this;
+    wx.request({
+      url: 'https://nywc.moontell.cn/api/card/details',
+      data: {
+        maxSeconds: 0,
+        minSeconds: 0,
+      },
+      method: 'GET',
+      header: {
+        'content-type': 'application/json',
+      },
+      success: function (res) {
+        console.log(res.data);
+        that.setData({
+          cardInfoList: res.data,
         })
-        console.log("index 用户信息：", this.data.userInfo);
       }
-    }
+    })
   }
+  // onLoad: function () {
+  //   //获取用户信息（原来的代码无效）
+  //   if (app.globalData.userInfo) {
+  //     this.setData({
+  //       userInfo: app.globalData.userInfo
+  //     })
+  //   } else {
+  //     // 由于 请求getinfo接口 是网络请求，可能会在 Page.onLoad 之后才返回
+  //     // 所以此处加入 callback 以防止这种情况
+  //     app.userInfoReadyCallback = res => {
+  //       this.setData({
+  //         userInfo: res.data
+  //       })
+  //       console.log("index 用户信息：", this.data.userInfo);
+  //     }
+  //   }
+  // }
 })
