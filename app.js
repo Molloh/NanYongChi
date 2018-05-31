@@ -1,7 +1,8 @@
 //app.js
 App({
   //api的基址。
-  apiURL: "https://localhost/api/",
+  // apiURL: "https://localhost/api",
+  apiURL: "https://nywc.moontell.cn/api",
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
