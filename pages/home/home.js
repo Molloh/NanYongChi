@@ -2,7 +2,6 @@
 //获取应用实例
 const app = getApp()
 
-
 Page({
   data: {
     motto: '南雍记',
@@ -26,14 +25,27 @@ Page({
         this.setData({
           userInfo: res.data
         })
-        console.log("index 用户信息：",this.data.userInfo);
+        console.log("home 用户信息：",this.data.userInfo);
       }
     }
-    console.log("openId",app.globalData.openId);
+
+    var that=this;
     wx.request({
       url: app.apiURL +'/member/miaoshaRecords?openId='+app.globalData.openId,
       success:function(res){
-        console.log("优惠券",res.data);
+        that.setData({
+          miaoshaRecords:res.data
+        })
+        console.log("秒杀记录json",that.data.miaoshaRecords)
+      }
+    })
+    wx.request({
+      url: app.apiURL + '/member/starProducts?openId=' + app.globalData.openId,
+      success:function(res){
+        console.log("收藏商品列表json",res.data);
+        that.setData({
+          starProducts: res.data
+        })
       }
     })
   },
@@ -49,5 +61,9 @@ Page({
     wx.redirectTo({
       url: '/pages/home/home',
     })
+  },
+  data:{
+    miaoshaRecords: null,
+    starProducts:null
   }
 })

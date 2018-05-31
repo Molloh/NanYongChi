@@ -7,7 +7,7 @@
       <!--用户昵称  -->
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
       <!--更新用户信息到数据库的按钮  -->
-      <button size='default' bindgetuserinfo='setUserInfo' open-type='getUserInfo' >更新信息</button>
+      <button size='default' bindgetuserinfo='setUserInfo' open-type='getUserInfo' >刷新</button>
     </block>
   </view>
   <!--积分信息  优惠券入口-->
@@ -16,9 +16,21 @@
     <navigator url='\home' open-type='redirect'>优惠券{{userInfo.bonus}}张</navigator>
   </view>
   <!--我的关注商品  -->
-  <view>
-
+  <view class="container log-list" >
+  <text>我的关注商品</text>
+    <block wx:for="{{starProducts}}" wx:for-item="starProduct">
+      <text >{{starProduct.pname}}</text>
+      <text>{{starProduct.pInfo}}</text>
+      <image src="{{starProduct.pImageURL}}"></image>
+      <text>{{starProduct.releaseTime}}</text>
+    </block>
   </view>
-  <!--我的秒杀记录  -->
-  <view></view>
+  <!--我的秒杀记录（秒杀是针对商品）  -->
+  <view class="container log-list" >
+  <text>我的秒杀记录</text>
+    <block wx:for="{{miaoshaRecords}}" wx:for-item="record">
+      <text >{{record.recordId}}--{{record.startTime}}</text>
+      <text>{{record.pname}} </text>
+    </block>
+  </view>
 </view>
