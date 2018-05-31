@@ -9,4 +9,6 @@
       <image src="{{ item.cardUrl }}"></image>
     </view>
   </view>
+  <!--哈~导航一下  -->
+  <navigator url='/pages/home/home'>个人中心</navigator>
 </view>

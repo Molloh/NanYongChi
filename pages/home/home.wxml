@@ -2,12 +2,23 @@
 <view class="container">
   <view class="userinfo">
     <block>
+      <!--  用户头像  -->
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarURL}}" background-size="cover"></image>
+      <!--用户昵称  -->
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-      <button bindgetuserinfo='setUserInfo' open-type='getUserInfo' >更新用户信息(我想把这个按钮弄得很小)</button>
+      <!--更新用户信息到数据库的按钮  -->
+      <button size='default' bindgetuserinfo='setUserInfo' open-type='getUserInfo' >更新信息</button>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <!--积分信息  优惠券入口-->
+  <view >
+    <navigator url='\home' open-type='redirect'>积分{{userInfo.bonus}}</navigator>
+    <navigator url='\home' open-type='redirect'>优惠券{{userInfo.bonus}}张</navigator>
   </view>
+  <!--我的关注商品  -->
+  <view>
+
+  </view>
+  <!--我的秒杀记录  -->
+  <view></view>
 </view>

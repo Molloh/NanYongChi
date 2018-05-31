@@ -29,6 +29,13 @@ Page({
         console.log("index 用户信息：",this.data.userInfo);
       }
     }
+    console.log("openId",app.globalData.openId);
+    wx.request({
+      url: app.apiURL +'/member/miaoshaRecords?openId='+app.globalData.openId,
+      success:function(res){
+        console.log("优惠券",res.data);
+      }
+    })
   },
   setUserInfo:res=>{
     app.globalData.userInfo.nickName = res.detail.userInfo.nickName;

@@ -37,14 +37,20 @@ Page({
     }, 350);
   },
   onLoad: function () {
-    console.log('onLoad');
-    var that = this;
-    //调用应用实例的方法获取全局数据
-    app.getUserInfo(function(userInfo){
-      //更新数据
-      that.setData({
-        userInfo:userInfo
-      });
-    });
+    //获取用户信息（原来的代码无效）
+    if (app.globalData.userInfo) {
+      this.setData({
+        userInfo: app.globalData.userInfo
+      })
+    } else {
+      // 由于 请求getinfo接口 是网络请求，可能会在 Page.onLoad 之后才返回
+      // 所以此处加入 callback 以防止这种情况
+      app.userInfoReadyCallback = res => {
+        this.setData({
+          userInfo: res.data
+        })
+        console.log("index 用户信息：", this.data.userInfo);
+      }
+    }
   }
 })
