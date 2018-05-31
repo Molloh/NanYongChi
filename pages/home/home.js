@@ -54,7 +54,7 @@ Page({
     app.globalData.userInfo.avatarURL = res.detail.userInfo.avatarUrl;
     console.log("更新后的用户信息",app.globalData.userInfo);
     wx.request({
-      url: app.apiURL+'member/uppdateinfo',
+      url: app.apiURL+'/member/uppdateinfo',
       method: "POST",
       data: app.globalData.userInfo
     })

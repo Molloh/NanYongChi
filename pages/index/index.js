@@ -11,7 +11,7 @@ Page({
   //事件处理函数
 
   slidethis: function(e) {
-    console.log(e);
+    console.info(e);
     var animation = wx.createAnimation({
       duration: 300,
       timingFunction: 'cubic-bezier(.8,.2,.1,0.8)',
