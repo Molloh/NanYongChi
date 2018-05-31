@@ -1,10 +1,13 @@
 //app.js
 App({
+  //api的基址。
+  apiURL: "https://nywc.moontell.cn/api/",
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
+
 
     //获得用户数据，并设置到app.globalData
     var that = this;
@@ -13,7 +16,7 @@ App({
         if (res.code) {
 
           wx.request({
-            url: 'https://nywc.moontell.cn/api/member/getinfo?js_code=' + res.code,
+            url: that.apiURL+'/member/getinfo?js_code=' + res.code,
             method: "get",
             success: function (openIdRes) {
               
@@ -64,6 +67,7 @@ App({
     // })
   },
   globalData: {
+    
     userInfo: null,
     openId:""
   }
