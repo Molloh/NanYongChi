@@ -6,10 +6,13 @@ Page({
     animationData: {},
     cardInfoList: [{
       cardUrl: 'http://ww1.sinaimg.cn/large/006k2f85ly1frb5zwonrzj32801e0t97.jpg',
+      cardInfo: 'test1',
     }, {
-        cardUrl: 'http://ww1.sinaimg.cn/large/006k2f85ly1frb5zwonrzj32801e0t97.jpg',
+      cardUrl: 'http://ww1.sinaimg.cn/large/006k2f85ly1frb5zwonrzj32801e0t97.jpg',
+      cardInfo: 'test2',
     }, {
-        cardUrl: 'http://ww1.sinaimg.cn/large/006k2f85ly1frb5zwonrzj32801e0t97.jpg',
+      cardUrl: 'http://ww1.sinaimg.cn/large/006k2f85ly1frb5zwonrzj32801e0t97.jpg',
+      cardInfo: 'test3',
     }]
   },
   //事件处理函数
