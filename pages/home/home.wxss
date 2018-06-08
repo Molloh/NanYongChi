@@ -1,21 +1,49 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* pages/home/home.wxss */
+
+.container {
+  padding: 20px;
+  border-top: 1px solid #eee;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.vol-swiper {
+  height: 1000rpx;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.vol-swiper-item {
+  padding: 20rpx;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  position: relative;
 }
 
-.usermotto {
-  margin-top: 200px;
+.vol-card {
+  text-align: center;
+  height: 100%;
+}
+
+.vol-picture {
+  width: 100%;
+}
+
+.vol-title {
+  font-size: 40rpx;
+  margin: 30rpx 0;
+}
+
+.vol-author {
+  font-size: 32rpx;
+}
+
+.vol-makettime {
+  font-size: 24rpx;
+  border-bottom: 1px solid #ccc;
+  padding: 50rpx 0;
+}
+
+.vol-more {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: #c1403d;
+  font-size: 40rpx;
 }

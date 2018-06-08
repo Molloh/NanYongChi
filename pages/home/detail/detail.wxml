@@ -1,0 +1,41 @@
+<!--pages/home/detail/detail.wxml-->
+<view class="container">
+  <image src="{{detail.hp_img_url}}" class="vol-picture"></image>
+  <view class="vol-meta">
+    <text class="vol-author">{{detail.hp_author}}</text>
+    <text class="vol-const">发表于</text>
+    <text class="vol-makettime">{{detail.hp_makettime}}</text>
+  </view>
+  <text class="vol-title">{{detail.hp_title}}</text>
+  <view class="vol-tool">
+    <view class="vol-img">
+      <image wx:if="{{isFavorite}}" src="/images/icon/favorite_active.png" catchtap="onFavoriteTap"></image>
+      <image wx:else src="/images/icon/favorite.png" catchtap="onFavoriteTap"></image>
+      <image src="/images/icon/share.png" class="vol-picture-small" catchtap="onShareTap"></image>
+    </view>
+    <view class="vol-horizon"></view>
+  </view>
+  <text class="vol-content">{{detail.hp_content}}</text>
+    <view class="comment">
+      <text class="text">全部评论</text>
+      <view class="split"></view>
+      <view class="comment-list">
+          <block wx:for="{{comments}}" wx:key="id">
+              <view class="comment-item">
+                  <view class="comment-header">
+                      <image class="comment-user-avatar" src="{{item.user.web_url}}"></image>
+                      <text class="comment-user-name">{{item.user.user_name}}</text>
+                      <text class="comment-date">{{item.input_date}}</text>
+                  </view>
+                  <view class="comment-main">
+                      <text>{{item.content}}</text>
+                  </view>
+                  <view class="comment-footer">
+                      <image class="comment-praise-image" src="/images/icon/praise.png"></image>
+                      <text class="comment-praise-num">{{item.praisenum}}</text>
+                  </view>
+              </view>
+          </block>
+      </view>
+  </view>
+</view>

@@ -1,0 +1,155 @@
+/* pages/home/detail/detail.wxss */
+
+.container {
+  padding: 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: column
+}
+
+.vol-picture {
+    width: 100%;
+    height: 460rpx;
+}
+
+.vol-meta {
+    flex-direction: row;
+    margin-left: 30rpx;
+    margin-top: 20rpx;
+}
+
+.vol-author {
+    font-size: 30rpx;
+    font-weight: 300;
+    color: #666;
+}
+
+.vol-const {
+    font-size: 24rpx;
+    color: #999;
+    margin-left: 20rpx;
+}
+
+.vol-makettime {
+    font-size: 24rpx;
+    margin-left: 30rpx;
+    color: #999;
+}
+
+.vol-title {
+    margin-left: 40rpx;
+    font-size: 36rpx;
+    font-weight: 700;
+    margin-top: 30rpx;
+    letter-spacing: 2px;
+    color: #4b556c;
+}
+
+.vol-tool {
+    margin-top: 20rpx;
+}
+
+.vol-img {
+    float: right;
+    margin-right: 40rpx;
+    vertical-align: middle;
+}
+
+.vol-img image {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.vol-img image+image {
+    margin-left: 30rpx;
+}
+
+.vol-horizon {
+    width: 660rpx;
+    height: 1px;
+    background-color: #e5e5e5;
+    position: relative;
+    margin: 0 auto;
+    top: 65rpx;
+    z-index: -1;
+}
+
+.vol-content {
+    color: #666;
+    font-size: 28rpx;
+    margin: 30rpx 0;
+    line-height: 44rpx;
+    letter-spacing: 2px;
+}
+
+.split {
+    width: 150rpx;
+    height: 6rpx;
+    margin-bottom: 30rpx;
+    background: #333;    
+}
+
+/* 评论列表样式 */
+.comment {
+    width: 100%;
+    margin-bottom: 80rpx;
+}
+
+.comment-item {
+    width: 100%;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.comment-header {
+    width: 100%;
+    margin-top: 36rpx;
+    font-size: 14px;    
+}
+
+.comment-user-avatar {
+    width: 36rpx;
+    height: 36rpx;
+    margin-right: 20rpx;
+    border-radius: 50%;
+    vertical-align: top;
+}
+
+.comment-user-name {
+    color: #999999;
+    vertical-align: top;
+}
+
+.comment-date {
+    float: right;
+    color: #ccc;
+    vertical-align: top;
+}
+
+.comment-main {
+    margin-top: 40rpx;
+    margin-left: 60rpx;
+    font-size: 14px;
+    color: #000;
+}
+
+.comment-footer {
+    margin-top: 30rpx;
+    margin-bottom: 20rpx;
+    padding-right: 30rpx;
+    text-align: right;
+}
+
+.comment-praise-image {
+    width: 14px;
+    height: 14px;
+    margin-right: 10rpx;
+    vertical-align: middle;
+}
+
+.comment-praise-num {
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+
