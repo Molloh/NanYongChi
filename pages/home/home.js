@@ -5,28 +5,28 @@ Page({
     vols: [
       {
         hpcontent_id: 0,
-        hp_img_url: '/images/01火立方.jpg',
+        hp_img_url: 'http://ww1.sinaimg.cn/large/006k2f85ly1fs46egit5fj32bc2bcb2a.jpg',
         hp_title: '火立方',
         hp_author: '设计&蓝小毛 作品',
         hp_makettime: 'June 1 2018',
       },
       {
         hpcontent_id: 1,
-        hp_img_url: '/images/02大活.jpg',
+        hp_img_url: 'http://ww1.sinaimg.cn/large/006k2f85ly1fs46f67t16j32bc2bc1ky.jpg',
         hp_title: '大活',
         hp_author: '设计&蓝小毛 作品',
         hp_makettime: 'June 2 2018',
       },
       {
         hpcontent_id: 2,
-        hp_img_url: '/images/03北大楼.jpg',
+        hp_img_url: 'http://ww1.sinaimg.cn/large/006k2f85ly1fs46ffhz9pj32bc2bc7wi.jpg',
         hp_title: '北大楼',
         hp_author: '设计&蓝小毛 作品',
         hp_makettime: 'June 3 2018',
       },
       {
         hpcontent_id: 3,
-        hp_img_url: '/images/04图书馆.jpg',
+        hp_img_url: 'http://ww1.sinaimg.cn/large/006k2f85ly1fs46fnok7gj32bc2bcx6p.jpg',
         hp_title: '图书馆',
         hp_author: '设计&蓝小毛 作品',
         hp_makettime: 'June 4 2018',
