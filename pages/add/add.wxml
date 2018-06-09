@@ -1,5 +1,57 @@
 <!--home.wxml-->
-<view class="main">
+
+<view class="page">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">主题</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder="请输入主题"/>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">介绍</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder="请输入介绍"/>
+      </view>
+    </view>
+  </view>
+    
+  <view class="page__bd">
+    <view class="weui-cells">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <view class="weui-uploader">
+             <view class="weui-uploader__hd">
+                <view class="weui-uploader__title">图片上传</view>
+                <view class="weui-uploader__info">{{files.length}}/2</view>
+              </view>
+              <view class="weui-uploader__bd">
+                <view class="weui-uploader__files" id="uploaderFiles">
+                  <block wx:for="{{files}}" wx:key="*this">
+                    <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                      <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                    </view>
+                  </block>
+              </view>
+              <view class="weui-uploader__input-box">
+                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="submit">
+    <button class="weui-btn" type="primary">submit</button>
+  </view>
+</view>
+<!-- <view class="main">
   <view class="image-container">
     <image bindtap='didPressChooesImage' class="image" bindload="imageLoad" src="{{imageObject.imageURL}}" mode="aspectFit" style="width:{{ width }}rpx; height:{{ height }}rpx;"></image>
     <progress percent="{{progress}}"/>
@@ -10,14 +62,14 @@
     key: <text>{{imageObject.key}}\n\n</text>
     imageURL: <text>{{imageObject.imageURL}}</text> 
   </view>
-    <form bindsubmit="formSubmit" bindreset="formReset" report-submit='true'>  
-  <view class="section">
-    <view class="section__title">名称</view>
-    <textarea name="dname"></textarea>
-  </view>
-  <view class="btn-area">
-    <button formType="submit">修改名称</button>
-    <!-- <button formType="reset">Reset</button> -->
-  </view>
-</form>
-</view>
+  <form bindsubmit="formSubmit" bindreset="formReset" report-submit='true'>  
+    <view class="section">
+      <view class="section__title">名称</view>
+      <textarea name="dname"></textarea>
+    </view>
+    <view class="btn-area">
+      <button formType="submit">修改名称</button>
+      <!-- <button formType="reset">Reset</button> -->
+    <!-- </view> -->
+  <!-- </form> -->
+<!-- </view> -->

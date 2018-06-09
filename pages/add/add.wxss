@@ -4,6 +4,10 @@ text {
   word-break: break-all; 
 }
 
+.submit {
+  padding-top: 40rpx;
+}
+
 .main {
   height: 750rpx;
   width: 750rpx;
