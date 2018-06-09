@@ -1,12 +1,13 @@
 /* pages/home/home.wxss */
 
 .container {
+  height: 90%;
   padding: 20px;
   border-top: 1px solid #eee;
 }
 
 .vol-swiper {
-  height: 1000rpx;
+  height: 100%;
 }
 
 .vol-swiper-item {
@@ -42,8 +43,8 @@
 
 .vol-more {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 20rpx;
+  right: 20rpx;
   color: #c1403d;
   font-size: 40rpx;
 }
