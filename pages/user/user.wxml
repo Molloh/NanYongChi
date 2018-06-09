@@ -10,13 +10,33 @@
       <button size='default' bindgetuserinfo='setUserInfo' open-type='getUserInfo' >刷新</button>
     </block>
   </view>
+  <view class="weui-cells weui-cells_after-title">
+    <navigator url="\home" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">积分{{userInfo.bonus}}</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="\home" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">优惠券{{userInfo.bonus}}</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="\home" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">我的关注商品{{userInfo.bonus}}</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="\home" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">我的秒杀记录{{userInfo.bonus}}</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>        
+  </view>        
+
+      
   <!--积分信息  优惠券入口-->
-  <view >
+  <!-- <view >
     <navigator url='\home' open-type='redirect'>积分{{userInfo.bonus}}</navigator>
     <navigator url='\home' open-type='redirect'>优惠券{{userInfo.bonus}}张</navigator>
-  </view>
+  </view> -->
   <!--我的关注商品  -->
-  <view class="container log-list" >
+  <!-- <view class="container log-list" >
   <text>我的关注商品</text>
     <block wx:for="{{starProducts}}" wx:for-item="starProduct">
       <text >{{starProduct.pname}}</text>
@@ -24,13 +44,13 @@
       <image src="{{starProduct.pImageURL}}"></image>
       <text>{{starProduct.releaseTime}}</text>
     </block>
-  </view>
+  </view> -->
   <!--我的秒杀记录（秒杀是针对商品）  -->
-  <view class="container log-list" >
+  <!-- <view class="container log-list" >
   <text>我的秒杀记录</text>
     <block wx:for="{{miaoshaRecords}}" wx:for-item="record">
       <text >{{record.recordId}}--{{record.startTime}}</text>
       <text>{{record.pname}} </text>
     </block>
-  </view>
+  </view> -->
 </view>
