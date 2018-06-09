@@ -1,5 +1,7 @@
 // pages/home/home.js
 
+var app = getApp();
+
 Page({
   data: {
     vols: [
@@ -36,6 +38,21 @@ Page({
   },
   // 页面加载
   onLoad: function (options) {
+    //获取用户信息（原来的代码无效）
+    if (app.globalData.userInfo) {
+      this.setData({
+        userInfo: app.globalData.userInfo
+      })
+    } else {
+      // 由于 请求getinfo接口 是网络请求，可能会在 Page.onLoad 之后才返回
+      // 所以此处加入 callback 以防止这种情况
+      app.userInfoReadyCallback = res => {
+        this.setData({
+          userInfo: res.data
+        })
+        console.log("index 用户信息：", this.data.userInfo);
+      }
+    }
 
   },
   // 取得vols列表id对应的详细数据
