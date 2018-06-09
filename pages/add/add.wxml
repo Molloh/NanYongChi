@@ -1,0 +1,23 @@
+<!--home.wxml-->
+<view class="main">
+  <view class="image-container">
+    <image bindtap='didPressChooesImage' class="image" bindload="imageLoad" src="{{imageObject.imageURL}}" mode="aspectFit" style="width:{{ width }}rpx; height:{{ height }}rpx;"></image>
+    <progress percent="{{progress}}"/>
+  </view>
+  
+  <view class="data" style='display:none'>
+     hash: <text>{{imageObject.hash}}\n\n</text>
+    key: <text>{{imageObject.key}}\n\n</text>
+    imageURL: <text>{{imageObject.imageURL}}</text> 
+  </view>
+    <form bindsubmit="formSubmit" bindreset="formReset" report-submit='true'>  
+  <view class="section">
+    <view class="section__title">名称</view>
+    <textarea name="dname"></textarea>
+  </view>
+  <view class="btn-area">
+    <button formType="submit">修改名称</button>
+    <!-- <button formType="reset">Reset</button> -->
+  </view>
+</form>
+</view>

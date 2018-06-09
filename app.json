@@ -4,7 +4,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/home/detail/detail",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/add/add"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -27,6 +28,12 @@
       {
         "pagePath": "pages/index/index",
         "text": "Index",
+        "iconPath": "images/tab/read.png",
+        "selectedIconPath": "images/tab/read_active.png"
+      },
+      {
+        "pagePath": "pages/add/add",
+        "text": "New",
         "iconPath": "images/tab/read.png",
         "selectedIconPath": "images/tab/read_active.png"
       },
