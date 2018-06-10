@@ -23,7 +23,7 @@ data：{
 }
 
 //收藏的api
-url: app.apiURL + "/card/iwant:,
+url: app.apiURL + "/card/iwant",
 header: { 'content-type': 'application/json' },
 method: "post",
 data:{ 
