@@ -20,8 +20,6 @@ App({
             url: that.apiURL + '/member/getinfo?js_code=' + res.code,
             method: "get",
             success: function (openIdRes) {
-
-
               // 判断openId是否获取成功
               if (openIdRes.data.openId != null & openIdRes.data.openId != undefined) {
                 that.globalData.openId = openIdRes.data.openId;

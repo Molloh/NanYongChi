@@ -19,16 +19,17 @@
         <view class="comment-item">
           <view class="comment-header">
             <image class="comment-user-avatar" src="{{item.avatarURL}}"></image>
-            <text class="comment-user-name">{{item.nickname}}</text>
-             <text class="comment-date">{{item.comTime}}</text>
+            <text class="comment-user-name">{{item.nickName}}</text>
+            <text class="comment-date">{{item.comTime}}</text>
           </view>
           <view class="comment-main">
             <text>{{item.dcomment}}</text>
           </view>
-          <view class="comment-footer">
+          <!-- 评论点赞 -->
+          <!-- <view class="comment-footer">
             <image class="comment-praise-image" src="/images/icon/praise.png"></image>
             <text class="comment-praise-num">{{item.numLike}}</text>
-          </view>
+          </view> -->
         </view>
       </block>
     </view>
@@ -37,11 +38,26 @@
       <view class="footer-praise">
         <image src="/images/icon/favorite.png"></image>
       </view>
-      <view class="footer-comment">
+      <view class="footer-comment" bindtap='onCommentTap'>
         <image src="/images/icon/share.png" />
       </view>
       <view class="footer-content">
           <text>{{serial.praisenum}} 喜欢 · {{serial.commentnum}} 评论</text>
       </view>
   </view>
+
+  <view class="release" hidden="{{!commentFocus}}">
+    <textarea class="text"
+          placeholder-class="input_null" 
+          fixed="true" 
+          maxlength="-1" 
+          show-confirm-bar="false" 
+          cursor-spacing="15" 
+          auto-height="true" 
+          focus="{{releaseFocus}}"
+          placeholder="评论"
+          bindinput='onTextAreaInput'></textarea>
+    <view class="submit" bindtap='onSubmitCommentTap'>发送</view>
+    <view class="cancel" bindtap='onCancelCommentTap'>取消</view>
+</view>
 </view>

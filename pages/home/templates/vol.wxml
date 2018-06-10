@@ -10,7 +10,7 @@
     <view class="vol-makettime">
       <text>{{item.uploadTime}}</text>
     </view>
-    <view class="vol-more" catchtap="viewMoreTap">
+    <view class="vol-more">
       <text>More.</text>
     </view>
   </view>
