@@ -56,9 +56,18 @@ Page({
     wx.request({
       url: app.apiURL + '/member/starProducts?openId=' + app.globalData.openId,
       success: function (res) {
-        console.log("收藏商品列表json", res.data);
+        console.log("关注商品列表json（这个忽略吧）", res.data);
         that.setData({
           starProducts: res.data
+        })
+      }
+    })
+    wx.request({
+      url: app.apiURL + "/member/getiwant?openId=" + app.globalData.openId,
+      success: function (res) {
+        console.log("iwant的设计列表json", res.data);
+        that.setData({
+          iwant: res.data
         })
       }
     })
@@ -78,6 +87,7 @@ Page({
   },
   data: {
     miaoshaRecords: null,
-    starProducts: null
+    starProducts: null,
+    iwant:null
   }
 })
