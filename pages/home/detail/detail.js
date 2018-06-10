@@ -4,6 +4,7 @@ const app = getApp();
 
 Page({
   commentValue: '',
+  isCollected: false,
   data: {
     commentFocus: false,
     serial: {
@@ -80,15 +81,10 @@ Page({
   },
 
   // 点击收藏事件
-  onFavoriteTap: function() {
-  },
-
-  // 取得所有的卡片是否收藏信息
-  getVolsIsFavoriteAsy: function() {
-  },
-
-  // 设置和显示收藏信息
-  showToast: function (volsIsFavorite, isFavorite) {
+  onCollectionTap: function() {
+    this.setData({
+      isCollected: !this.isCollected
+    })
   },
 
   // 点击分享事件

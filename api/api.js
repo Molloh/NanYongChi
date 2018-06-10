@@ -28,9 +28,15 @@ const wxRequest = (params, url) => {
 const getCardsList = (params) => wxRequest(params, prefix + 'card/details');
 const getCardByDkey = (params) => wxRequest(params, prefix + 'card/singleCardDetails');
 const submitComment = (params) => wxRequest(params, prefix + 'design/newComment');
+const collectIWant = (params) => wxRequest(params, prefix + 'card/iwant');
+const checkIsCollected = (params) => wxRequest(params, prefix + '');
+const getIWant = (params) => wxRequest(params, prefix + 'member/getiwant');
 
 module.exports = {
   getCardsList,
   getCardByDkey,
-  submitComment
+  submitComment,
+  collectIWant,
+  checkIsCollected,
+  getIWant,
 }

@@ -5,7 +5,8 @@
     "pages/logs/logs",
     "pages/home/detail/detail",
     "pages/user/user",
-    "pages/add/add"
+    "pages/add/add",
+    "pages/user/want/want"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -26,22 +27,16 @@
         "selectedIconPath": "/images/tab/home_active.png"
       },
       {
-        "pagePath": "pages/index/index",
-        "text": "Index",
-        "iconPath": "images/tab/read.png",
-        "selectedIconPath": "images/tab/read_active.png"
-      },
-      {
         "pagePath": "pages/add/add",
         "text": "New",
-        "iconPath": "images/tab/read.png",
-        "selectedIconPath": "images/tab/read_active.png"
+        "iconPath": "images/tab/idea.png",
+        "selectedIconPath": "images/tab/idea_active.png"
       },
       {
         "pagePath": "pages/user/user",
         "text": "User",
-        "iconPath": "images/tab/read.png",
-        "selectedIconPath": "images/tab/read_active.png"
+        "iconPath": "images/tab/user.png",
+        "selectedIconPath": "images/tab/user_active.png"
       }
     ]
   }

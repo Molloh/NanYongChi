@@ -11,20 +11,8 @@
     </block>
   </view>
   <view class="weui-cells weui-cells_after-title">
-    <navigator url="\home" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-      <view class="weui-cell__bd">积分{{userInfo.bonus}}</view>
-      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-    </navigator>
-    <navigator url="\home" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-      <view class="weui-cell__bd">优惠券{{userInfo.bonus}}</view>
-      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-    </navigator>
-    <navigator url="\home" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-      <view class="weui-cell__bd">我的关注商品{{userInfo.bonus}}</view>
-      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-    </navigator>
-    <navigator url="\home" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-      <view class="weui-cell__bd">我的秒杀记录{{userInfo.bonus}}</view>
+    <navigator url="/pages/user/want/want" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">I WANT {{userInfo.bonus}}</view>
       <view class="weui-cell__ft weui-cell__ft_in-access"></view>
     </navigator>        
   </view>        
