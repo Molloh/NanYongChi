@@ -29,8 +29,10 @@ const getCardsList = (params) => wxRequest(params, prefix + 'card/details');
 const getCardByDkey = (params) => wxRequest(params, prefix + 'card/singleCardDetails');
 const submitComment = (params) => wxRequest(params, prefix + 'design/newComment');
 const collectIWant = (params) => wxRequest(params, prefix + 'card/iwant');
-const checkIsCollected = (params) => wxRequest(params, prefix + '');
+const checkIsCollected = (params) => wxRequest(params, prefix + 'member/wantIt');
 const getIWant = (params) => wxRequest(params, prefix + 'member/getiwant');
+const uploadImages = (params) => wxRequest(params, prefix + 'design/insert');
+const iDontWant = (params) => wxRequest(params, prefix + 'card/iDontWant');
 
 module.exports = {
   getCardsList,
@@ -39,4 +41,6 @@ module.exports = {
   collectIWant,
   checkIsCollected,
   getIWant,
+  uploadImages,
+  iDontWant
 }

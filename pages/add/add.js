@@ -3,11 +3,11 @@ const qiniuUploader = require("../../utils/qiniuUploader");
 
 // 初始化七牛相关参数
 function initQiniu() {
-  var options = {
+  let options = {
     region: 'ECN', // 华北区
     uptokenURL: app.apiURL+'/qiniu/uptoken',
-    uptoken:'ZBBVzh8MXXphhCt-IGg9QKFY-PbVXZgHN5ZhsEuD:mRQ-c6Gosg7UxEIkJo4D0yEYuYc=:eyJzY29wZSI6Im55d2MiLCJyZXR1cm5Cb2R5Ijoie1wia2V5XCI6XCIkKGtleSlcIixcImhhc2hcIjpcIiQoZXRhZylcIixcImJ1Y2tldFwiOlwiJChidWNrZXQpXCIsXCJmc2l6ZVwiOiQoZnNpemUpfSIsImRlYWRsaW5lIjoxODQzODc1ODc0fQ==',
-domain: 'http://nywcstatic.moontell.cn',
+    uptoken: 'ZBBVzh8MXXphhCt-IGg9QKFY-PbVXZgHN5ZhsEuD:mRQ-c6Gosg7UxEIkJo4D0yEYuYc=:eyJzY29wZSI6Im55d2MiLCJyZXR1cm5Cb2R5Ijoie1wia2V5XCI6XCIkKGtleSlcIixcImhhc2hcIjpcIiQoZXRhZylcIixcImJ1Y2tldFwiOlwiJChidWNrZXQpXCIsXCJmc2l6ZVwiOiQoZnNpemUpfSIsImRlYWRsaW5lIjoxODQzODc1ODc0fQ==',
+    domain: 'http://nywcstatic.moontell.cn',
     shouldUseQiniuFileName: true
   };
   qiniuUploader.init(options);

@@ -3,9 +3,9 @@ const api = require("../../../api/api.js");
 const app = getApp();
 
 Page({
-  commentValue: '',
-  isCollected: false,
   data: {
+    commentValue: '',
+    isCollected: undefined,
     commentFocus: false,
     serial: {
       praisenum: 10,
@@ -16,6 +16,18 @@ Page({
     comments: []
   },
   onLoad: function (options) {
+    let openId = app.globalData.openId;
+    api.checkIsCollected({
+      data: {
+        dkey: options.dkey,
+        openId: openId,
+      },
+      success: (res) => {
+        this.setData({
+          isCollected: res.data,
+        })
+      }
+    });
     api.getCardByDkey({
       data: {
         dkey: options.dkey,
@@ -28,6 +40,10 @@ Page({
             hp_title: res.data.dname,
             hp_author: res.data.nickname,
             hp_makettime: res.data.uploadTime,
+          },
+          serial: {
+            praisenum: res.data.numLike,
+            commentnum: res.data.comments.length,
           },
           comments: res.data.comments,
         })
@@ -82,9 +98,52 @@ Page({
 
   // 点击收藏事件
   onCollectionTap: function() {
-    this.setData({
-      isCollected: !this.isCollected
-    })
+    let dkey = this.data.detail.hpcontent_id;
+    let openId = app.globalData.openId;
+    let bool = this.data.isCollected;
+    console.log(bool);
+    if (bool) {
+      api.iDontWant({
+        data: {
+          dkey: dkey,
+          wantOpenId: openId,
+        },
+        method: '',
+        success: (res) => {
+          wx.showToast({
+            title: '不想要了',
+            icon: "success",
+            duration: 600,
+            success: (res) => {
+              this.setData({
+                isCollected: !bool,
+              });
+            }
+          })
+        }
+      })
+    } else {
+      api.collectIWant({
+        data: {
+          dkey: dkey,
+          wantOpenId: app.globalData.openId,
+          what: 'T恤',
+        },
+        method: 'POST',
+        success: (res) => {
+          wx.showToast({
+            title: '添加至我想要的',
+            icon: "success",
+            duration: 600,
+            success: (res) => {
+              this.setData({
+                isCollected: !bool,
+              });
+            }
+          })
+        }
+      })
+    }
   },
 
   // 点击分享事件
