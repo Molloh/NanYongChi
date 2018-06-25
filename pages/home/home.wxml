@@ -3,8 +3,10 @@
     <swiper class="vol-swiper" current="{{current}}">
         <block wx:for="{{vols}}" wx:for-index="idx" wx:key="{{hpcontent_id}}">
             <swiper-item class="vol-swiper-item">
+              <view class='vol-swiper-sub-item'>
                 <import src="templates/vol.wxml" />
                 <template is="vol" data="{{item: item, isDetail}}" />
+              </view>
             </swiper-item>
         </block>
     </swiper>

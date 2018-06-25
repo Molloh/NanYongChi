@@ -1,5 +1,10 @@
 /* pages/home/home.wxss */
 
+wx-swiper-item {
+  width: 90% !important;
+  margin-left: 5% !important;
+}
+
 .container {
   height: 90%;
   padding: 20px;
@@ -11,10 +16,18 @@
 }
 
 .vol-swiper-item {
+  padding: 15rpx;
+  box-sizing: border-box;
+  position: relative;
+  height: 100%;
+}
+
+.vol-swiper-sub-item {
   padding: 20rpx;
   box-sizing: border-box;
   border: 2px solid #ccc;
   position: relative;
+  height: 100%;
 }
 
 .vol-card {

@@ -6,13 +6,12 @@
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarURL}}" background-size="cover"></image>
       <!--用户昵称  -->
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-      <!--更新用户信息到数据库的按钮  -->
-      <button size='default' bindgetuserinfo='setUserInfo' open-type='getUserInfo' >刷新</button>
     </block>
   </view>
+   <view class="userinfo-split"></view>
   <view class="weui-cells weui-cells_after-title">
     <navigator url="/pages/user/want/want" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-      <view class="weui-cell__bd">I WANT {{userInfo.bonus}}</view>
+      <view class="weui-cell__bd">我想要的</view>
       <view class="weui-cell__ft weui-cell__ft_in-access"></view>
     </navigator>        
   </view>        
