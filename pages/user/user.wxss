@@ -2,6 +2,7 @@
 .container {
   text-align: center;
 }
+
 .userinfo {
   padding-top: 60rpx;
   display: flex;

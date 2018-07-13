@@ -1,18 +1,22 @@
 // pages/home/home.js
 const api = require('../../api/api.js');
+const app = getApp();
 
 Page({
   data: {
-    vols: [],
+    animated: true,
+    title: '猫咪',
+    recommends: [],
+    userInfo: {},
     current: 0
   },
   
   // 页面加载
   onLoad: function (options) {
-    this.getVols();
+    this.getRecommends();
   },
   // 取得vols列表id对应的详细数据
-  getVols: function () {
+  getRecommends: function () {
     let that = this;
     
     api.getCardsList({
@@ -23,12 +27,25 @@ Page({
       success: (res) => {
         console.log("卡片详情", res.data);
         that.setData({
-          vols: res.data,
+          recommends: res.data,
         })
       }
     })
-
   },
+
+  onSwiperChange: function () {
+    let that = this;
+    that.setData({
+      title: '11111',
+      animated: !that.data.animated,
+    });
+    setTimeout(function () {
+      that.setData({
+        animated: !that.data.animated,
+      });
+    }, 100);
+  },
+
   // 页面初次渲染完成
   onReady: function () {
   },
@@ -42,3 +59,4 @@ Page({
   },
 
 })
+

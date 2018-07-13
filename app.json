@@ -11,33 +11,6 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "NanYongChi",
     "navigationBarTextStyle": "black"
-  },
-  "tabBar": {
-    "color": "#808080",
-    "selectedColor": "#333",
-    "backgroundColor": "#f5f5f5",
-    "borderStyle": "white",
-    "list": [
-      {
-        "pagePath": "pages/home/home",
-        "text": "Home",
-        "iconPath": "/images/tab/home.png",
-        "selectedIconPath": "/images/tab/home_active.png"
-      },
-      {
-        "pagePath": "pages/add/add",
-        "text": "New",
-        "iconPath": "images/tab/idea.png",
-        "selectedIconPath": "images/tab/idea_active.png"
-      },
-      {
-        "pagePath": "pages/user/user",
-        "text": "User",
-        "iconPath": "images/tab/user.png",
-        "selectedIconPath": "images/tab/user_active.png"
-      }
-    ]
   }
 }

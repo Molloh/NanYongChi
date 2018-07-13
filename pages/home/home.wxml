@@ -1,13 +1,27 @@
 <!--pages/home/home.wxml-->
 <view class="container">
-    <swiper class="vol-swiper" current="{{current}}">
-        <block wx:for="{{vols}}" wx:for-index="idx" wx:key="{{hpcontent_id}}">
-            <swiper-item class="vol-swiper-item">
-              <view class='vol-swiper-sub-item'>
-                <import src="templates/vol.wxml" />
-                <template is="vol" data="{{item: item, isDetail}}" />
+    <swiper class="recommend-swiper" current='0' previous-margin='30rpx' next-margin='30rpx' bindchange='onSwiperChange' indicator-dots='true'>
+        <block wx:for="{{recommends}}" wx:for-index="idx" wx:key="{{hpcontent_id}}">
+            <swiper-item class="recommend-swiper-item">
+              <view class='recommend-swiper-sub-item'>
+                <import src="templates/recommend.wxml" />
+                <template is="recommend" data="{{item: item, isDetail}}" />
               </view>
             </swiper-item>
         </block>
     </swiper>
+    <view class='card-info'>
+      <block>
+        <view class='sub-title'>雍物集\n</view>
+        <view class="{{animated?'animated_title':'title'}}">{{title}}\n</view>
+      </block>
+    </view>
+    <view class='bttn'>
+      <image class='scan' src="/images/icon/scan.png" catchtap="toUserCenter"></image>
+      <view class='row'>
+        <view class='more'>MORE</view>
+        <view class='split' />
+        <image class='user' src="/images/tab/user.png" catchtap="toUserCenter"></image>
+      </view>
+    </view>
 </view>

@@ -1,0 +1,14 @@
+<template name="recommend">
+  <view class="recommend-card" data-vol-id="{{item.dkey}}" catchtap="viewDetailTap">
+    <image class="rec-picture" src="{{item.imageURL}}" mode="aspectFill"></image>
+    <view class='rec-info'>
+      <view class='rec-category'>T-Shirt</view>
+      <view class='rec-discription'>一只南京的猫,ta从未见过春天和秋天</view>
+      <view>
+        <text class='rec-by'>by </text>
+        <text class='rec-author'>蓝小毛</text>
+      </view>
+    </view>
+    
+  </view>
+</template>
