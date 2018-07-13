@@ -17,7 +17,7 @@
       </block>
     </view>
     <view class='bttn'>
-      <image class='scan' src="/images/icon/scan.png" catchtap="toUserCenter"></image>
+      <image class='scan' src="/images/icon/scan.png" catchtap="onScanCode"></image>
       <view class='row'>
         <view class='more'>MORE</view>
         <view class='split' />

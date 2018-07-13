@@ -33,6 +33,20 @@ Page({
     })
   },
 
+  onScanCode: function () {
+    wx.scanCode({
+      success: (res) => {
+        console.log(res)
+      }
+    });
+  },
+
+  toUserCenter: function () {
+    wx.navigateTo({
+      url: '../user/user',
+    })
+  },
+
   onSwiperChange: function () {
     let that = this;
     that.setData({

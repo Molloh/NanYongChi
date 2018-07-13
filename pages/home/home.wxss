@@ -97,26 +97,26 @@
 .rec-category {
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
-  font-size: 24rpx;
-  letter-spacing: 2rpx;
+  font-size: 24px;
+  letter-spacing: 2px;
   font-weight: 500;
   color: #868686;
 }
 
 .rec-discription {
-  margin-top: 5rpx;
-  margin-bottom: 10rpx;
+  margin-top: 5px;
+  margin-bottom: 10px;
   font-family: 'Roboto Slab', serif;
 }
 
 .rec-by {
-  font-size: 18rpx;
+  font-size: 16px;
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
 }
 
 .rec-author {
-  font-size: 32rpx;
+  font-size: 24px;
   font-weight: 600;
   text-decoration: none;
   color: #AD7D52;
@@ -154,6 +154,8 @@
   background: #E0E3DA;
   width: 3rpx;
   height: 1.75em;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
 }
 
 .user {
