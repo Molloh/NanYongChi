@@ -33,13 +33,15 @@ Page({
         dkey: options.dkey,
       },
       success: (res) => {
+        console.log(res.data);
         this.setData({
           detail: {
             hpcontent_id: res.data.dkey,
             hp_img_url: res.data.imageURL,
             hp_title: res.data.dname,
-            hp_author: res.data.nickname,
+            hp_author: res.data.nickName,
             hp_makettime: res.data.uploadTime,
+            hp_content: res.data.dinfo
           },
           serial: {
             praisenum: res.data.numLike,
@@ -48,7 +50,8 @@ Page({
           comments: res.data.comments,
         })
       }
-    })
+    });
+    console.log(this.data);
   },
 
   onCommentTap: function() {

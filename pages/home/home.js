@@ -5,7 +5,8 @@ const app = getApp();
 Page({
   data: {
     animated: true,
-    title: '猫咪',
+    active: true,
+    title: '',
     recommends: [],
     userInfo: {},
     current: 0
@@ -28,6 +29,7 @@ Page({
         console.log("卡片详情", res.data);
         that.setData({
           recommends: res.data,
+          title: res.data[0].dname,
         })
       }
     })
@@ -41,20 +43,20 @@ Page({
     });
   },
 
-  toUserCenter: function () {
+  toWishList: function () {
     wx.navigateTo({
-      url: '../user/user',
+      url: '../user/want/want',
     })
   },
 
-  onSwiperChange: function () {
+  onSwiperChange: function (e) {
     let that = this;
     that.setData({
-      title: '11111',
       animated: !that.data.animated,
     });
     setTimeout(function () {
       that.setData({
+        title: that.data.recommends[e.detail.current].dname,
         animated: !that.data.animated,
       });
     }, 100);
@@ -66,7 +68,7 @@ Page({
 
   // 点击卡券整体跳转详情页
   viewDetailTap: function (event) {
-    let id = event.currentTarget.dataset.volId;
+    let id = event.currentTarget.dataset.recId;
     wx.navigateTo({
       url: 'detail/detail?dkey=' + id
     });

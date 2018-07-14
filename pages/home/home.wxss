@@ -7,8 +7,10 @@
 }
 
 .card-info {
+  position: fixed;
   padding-left: 45rpx;
-  bottom: 0;
+  bottom: 15rpx;
+  max-width: 450rpx;
 }
 
 @-webkit-keyframes slideInUp {
@@ -32,8 +34,9 @@
 }
 
 .animated_title {
+  width: 100%;
   font-weight: bold;
-  font-size: 2.5em;
+  font-size: 2em;
 /*animation*/
         -webkit-animation: slideInUp 2s;
         animation: slideInUp 2s;
@@ -46,8 +49,9 @@
 }
 
 .title {
+  width: 100%;
   font-weight: bold;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 .sub-title {
@@ -97,7 +101,7 @@
 .rec-category {
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: 2px;
   font-weight: 500;
   color: #868686;
@@ -105,8 +109,9 @@
 
 .rec-discription {
   margin-top: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 10rpx;
   font-family: 'Roboto Slab', serif;
+  font-size: 28px;
 }
 
 .rec-by {
@@ -127,27 +132,24 @@
 }
 
 .bttn {
-  right: 15rpx;
+  right: 45rpx;
   bottom: 35rpx;
   position: absolute;
   display: flex;
-  
   flex-direction: column;
 }
 
 .row {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  align-content: center;
+  align-items: flex-end;
 }
 
 .scan {
   align-self: flex-end;
-  margin-right: 15rpx;
-  margin-bottom: 5rpx;
-  height: 2.5em;
-  width: 2.5em;
+  margin-bottom: 25rpx;
+  height: 2em;
+  width: 2em;
 }
 
 .split {
@@ -159,14 +161,16 @@
 }
 
 .user {
+  margin-right: -4rpx;
   height: 2em;
   width: 2em;
 }
 
 .more {
-  font-size: 1.5em;
+  margin-bottom: -10rpx;
+  margin-right: 4rpx;
+  font-size: 1.2em;
   position: relative;
-  margin-right: 10rpx;
   list-style-type: none;
   cursor: pointer;
   color: rgb(117, 115, 115);

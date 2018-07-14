@@ -21,7 +21,7 @@
       <view class='row'>
         <view class='more'>MORE</view>
         <view class='split' />
-        <image class='user' src="/images/tab/user.png" catchtap="toUserCenter"></image>
+        <image class='user' src="/images/icon/wish-list.jpg" catchtap="toWishList"></image>
       </view>
     </view>
 </view>

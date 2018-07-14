@@ -1,7 +1,7 @@
 <template name="single-want">
   <view class="article" data-id="{{item.dkey}}" bindtap="viewDetailTap">
     <view class="header">
-      <text>- IDEA -</text>
+      <text>- MY WISH -</text>
     </view>
     <view class="title">
       <text>{{item.dname}}</text>    
