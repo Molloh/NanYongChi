@@ -7,6 +7,10 @@
     <text class="vol-makettime">{{detail.hp_makettime}}</text>
   </view>
   <text class="vol-title">{{detail.hp_title}}</text>
+  <!--港欢增加两个button  -->
+  <button open-type="share">转发</button>
+  <navigator open-type='redirect' url='/pages/home/home'>回到首页</navigator>
+  <!--增加结束  -->
   <view class="vol-tool">
     <view class="vol-horizon"></view>
   </view>

@@ -155,6 +155,12 @@ Page({
 
   // 页面分享
   onShareAppMessage: function () {
+    console.log("用户分享")
+    return {
+      title: '南雍记  ' + this.data.detail.hp_title,
+      path: '/pages/home/detail/detail?dkey=' + this.data.detail.hpcontent_id,
+      imageUrl: this.data.detail.hp_img_url
+    }
   }
 
 })
