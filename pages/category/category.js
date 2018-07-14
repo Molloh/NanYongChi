@@ -5,62 +5,46 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    categories: [
+      {
+        image: '/images/category/notebook.png',
+        name: '笔记本'
+      },
+      {
+        image: '/images/category/bug.png',
+        name: '帆布袋'
+      },
+      {
+        image: '/images/category/tshirt.png',
+        name: 'T恤'
+      },
+      {
+        image: '/images/category/cap.png',
+        name: '遮阳帽' 
+      },
+      {
+        image: '/images/category/mug.png',
+        name: '马克杯'
+      },
+      {
+        image: '/images/category/umbrella.png',
+        name: '雨伞'
+      }
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
+  // 点击卡券整体跳转详情页
+  viewDetailTap: function (event) {
+    let type = event.currentTarget.dataset.cateId;
+    wx.navigateTo({
+      url: '../list/list?type=' + type,
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
 })

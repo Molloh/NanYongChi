@@ -1,0 +1,30 @@
+<template name="single-want">
+  <view class="article" data-id="{{item.dkey}}" bindtap="viewDetailTap">
+    <view class="header">
+      <text>- {{item.theme}} -</text>
+    </view>
+    <view class="title">
+      <text>{{item.dname}}</text>    
+    </view>
+    <view class="author">
+      <text>{{item.nickName}}</text>
+    </view>
+    <view class="picture">
+      <image src="{{item.imageURL}}" mode="aspectFill"></image>
+    </view>
+    <view class="content">
+      <text>{{item.dinfo}}</text>
+    </view>
+    <!-- <view class="footer clearfix">
+      <view class="before-time">
+        <text>{{item.hp_makettime}}</text>
+      </view>
+      <view class="praise-share">
+        <image class="praise-image" wx:if="{{item.is_collected}}" src="/images/icon/favorite_active.png" catchtap="onCollectionTap" data-article-id="{{item.content_id}}"></image>
+        <image class="praise-image" wx:else src="/images/icon/favorite.png" catchtap="onCollectionTap" data-article-id="{{item.content_id}}"></image>
+        <image class="share-image" src="/images/icon/share.png" catchtap="onShareTap"></image> 
+      </view>
+    </view> -->
+  </view>
+  <view class="article-split"></view>  
+</template>

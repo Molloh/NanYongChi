@@ -7,7 +7,8 @@
     "pages/user/user",
     "pages/add/add",
     "pages/user/want/want",
-    "pages/category/category"
+    "pages/category/category",
+    "pages/list/list"
   ],
   "window": {
     "backgroundTextStyle": "light",

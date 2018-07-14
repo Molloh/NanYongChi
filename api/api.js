@@ -34,6 +34,7 @@ const checkIsCollected = (params) => wxRequest(params, prefix + 'member/wantIt')
 const getIWant = (params) => wxRequest(params, prefix + 'member/getiwant');
 const uploadImages = (params) => wxRequest(params, prefix + 'design/insert');
 const iDontWant = (params) => wxRequest(params, prefix + 'card/iDontWant');
+const cateSearch = (params) => wxRequest(params, prefix + 'card/getByTheme');
 
 module.exports = {
   getCardsList,
@@ -43,5 +44,6 @@ module.exports = {
   checkIsCollected,
   getIWant,
   uploadImages,
-  iDontWant
+  iDontWant,
+  cateSearch
 }

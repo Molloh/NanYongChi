@@ -2,13 +2,12 @@
   <view class="recommend-card" data-rec-id="{{item.dkey}}" data-rec-name="{{item.dname}}" catchtap="viewDetailTap">
     <image class="rec-picture" src="{{item.imageURL}}" mode="aspectFill"></image>
     <view class='rec-info'>
-      <view class='rec-category'>T-Shirt</view>
+      <view class='rec-category'>{{item.theme}}</view>
       <view class='rec-discription'>{{item.dinfo}}</view>
       <view>
         <text class='rec-by'>by  </text>
         <text class='rec-author'>{{item.nickName}}</text>
       </view>
     </view>
-    
   </view>
 </template>

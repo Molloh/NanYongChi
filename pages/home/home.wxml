@@ -19,7 +19,7 @@
     <view class='bttn'>
       <image class='scan' src="/images/icon/scan.png" catchtap="onScanCode"></image>
       <view class='row'>
-        <view class='more'>MORE</view>
+        <view class='more' catchtap='toCateList'>MORE</view>
         <view class='split' />
         <image class='user' src="/images/icon/wish-list.jpg" catchtap="toWishList"></image>
       </view>

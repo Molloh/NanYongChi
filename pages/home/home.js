@@ -16,6 +16,7 @@ Page({
   onLoad: function (options) {
     this.getRecommends();
   },
+  
   // 取得vols列表id对应的详细数据
   getRecommends: function () {
     let that = this;
@@ -96,6 +97,12 @@ Page({
   toWishList: function () {
     wx.navigateTo({
       url: '../user/want/want',
+    })
+  },
+
+  toCateList: function () {
+    wx.navigateTo({
+      url: '../category/category',
     })
   },
 

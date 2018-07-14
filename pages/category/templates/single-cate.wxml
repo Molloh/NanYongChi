@@ -1,0 +1,8 @@
+<template name="single-cate">
+  <view class="cate-card" data-cate-id="{{item.name}}" catchtap="viewDetailTap">
+    <view class='card-wrap'>
+      <image class="cate-picture" src="{{item.image}}"></image>
+      <view class='cate-info'>{{item.name}}</view>
+    </view>
+  </view>
+</template>

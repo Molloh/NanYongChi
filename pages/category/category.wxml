@@ -1,6 +1,6 @@
 <view class="container">
-  <block wx:for="{{category}}" wx:for-index="idx" wx:key="{{content_id}}">
-    <import src="templates/single-want.wxml" />
-     <template is="single-want" data="{{item: item}}" /> 
+  <block wx:for="{{categories}}" wx:for-index="idx" wx:key="{{content_id}}">
+    <import src="templates/single-cate.wxml" />
+     <template is="single-cate" data="{{item: item}}" /> 
   </block>
 </view>
