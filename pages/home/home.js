@@ -48,25 +48,41 @@ Page({
           success:function(res){
             console.log(res.data);
 
+            
+
             var dname = res.data.dname
 
-            wx.showModal({
-              title: '查看作品？',
-              content: '是否查看作品：'+ dname,
-              confirmText: "查看",
-              cancelText: "取消",
-              success: function (res) {
-                console.log(res);
-                if (res.confirm) {
-                  console.log('用户确认查看详情')
-                  wx.navigateTo({
-                    url: 'detail/detail?dkey=' + id
-                  });
-                } else {
-                  console.log('用户取消查看详情')
+            if (dname==undefined){
+              wx.showModal({
+                title:"无效二维码",
+                content: '仅支持南雍文创商品的二维码哦',
+                showCancel: false,
+                success: function (res) {
+                  if (res.confirm) {
+                    console.log('用户点击确定')
+                  }
                 }
-              }
-            });
+              });
+            }
+            else{
+              wx.showModal({
+                title: '查看作品？',
+                content: '是否查看作品：' + dname,
+                confirmText: "查看",
+                cancelText: "取消",
+                success: function (res) {
+                  console.log(res);
+                  if (res.confirm) {
+                    console.log('用户确认查看详情')
+                    wx.navigateTo({
+                      url: 'detail/detail?dkey=' + id
+                    });
+                  } else {
+                    console.log('用户取消查看详情')
+                  }
+                }
+              });
+            }
           }
         })
 

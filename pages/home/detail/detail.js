@@ -121,6 +121,12 @@ Page({
               this.setData({
                 isCollected: !bool,
               });
+
+              var varserial = this.data.serial;
+              varserial.praisenum--;
+              this.setData({
+                serial: varserial
+              })
             }
           })
         }
@@ -142,6 +148,12 @@ Page({
               this.setData({
                 isCollected: !bool,
               });
+
+              var varserial = this.data.serial;
+              varserial.praisenum++;
+              this.setData({
+                serial: varserial
+              })
             }
           })
         }

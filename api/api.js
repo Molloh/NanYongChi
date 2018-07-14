@@ -1,4 +1,5 @@
 const prefix = "https://nywc.moontell.cn/nywc/api/";
+// const prefix = "https://localhost/api/";//测试用
 
 const wxRequest = (params, url) => {
   wx.showLoading({
