@@ -1,21 +1,27 @@
 <!--pages/home/detail/detail.wxml-->
 <view class="container">
-  <image mode="aspectFit" src="{{detail.hp_img_url}}" class="vol-picture"></image>
-  <view class="vol-meta">
+  <swiper class='swiper'>
+    <block wx:for="{{imageURLs}}">
+      <swiper-item>
+        <image mode="aspectFit" src="{{item}}" class="vol-picture"></image>
+      </swiper-item>
+    </block>
+  </swiper>
     <text class="vol-author">设计&{{detail.hp_author}} 作品</text>
-    <text class="vol-const">发表于</text>
-    <text class="vol-makettime">{{detail.hp_makettime}}</text>
+  <view class="vol-meta">
+    <text class="vol-title">{{detail.hp_content}}</text>
+    <text class="vol-makettime">发表于 {{detail.hp_makettime}}</text>
   </view>
-  <text class="vol-title">{{detail.hp_title}}</text>
-  <!--港欢增加两个button  -->
-  <button open-type="share">转发</button>
-  <!--增加结束  -->
+
   <view class="vol-tool">
     <view class="vol-horizon"></view>
   </view>
-  <text class="vol-content">{{detail.hp_content}}</text>
   <view class="comment">
-    <text class="text">全部评论</text>
+    <view class='share-wrapper'>
+      <text class="text-title">全部评论</text>
+      <!--港欢增加两个button  -->
+      <button class="share-btn" open-type="share" plain='true'>分享</button>
+    </view>
     <view class="split"></view>
     <view class="comment-list">
       <block wx:for="{{comments}}" wx:key="id">

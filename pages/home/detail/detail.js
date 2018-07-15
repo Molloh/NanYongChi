@@ -1,5 +1,6 @@
 // pages/home/detail/detail.js
 const api = require("../../../api/api.js");
+const util = require("../../../utils/util.js");
 const app = getApp();
 
 Page({
@@ -13,7 +14,8 @@ Page({
     },
     isDetail: false,
     detail: {},
-    comments: []
+    comments: [],
+    imageURLs: []
   },
   onLoad: function (options) {
     let openId = app.globalData.openId;
@@ -34,23 +36,36 @@ Page({
       },
       success: (res) => {
         console.log(res.data);
+        let coms = [];
+        for (let i in res.data.comments) {
+          coms.push({
+            nickName: res.data.comments[i].nickName,
+            avatarURL: res.data.comments[i].avatarURL,
+            dcomment: res.data.comments[i].dcomment,
+            comTime: util.formatTime(res.data.comments[i].comTime)
+          })
+        }
         this.setData({
           detail: {
             hpcontent_id: res.data.dkey,
             hp_img_url: res.data.imageURL,
             hp_title: res.data.dname,
             hp_author: res.data.nickName,
-            hp_makettime: res.data.uploadTime,
+            hp_makettime: util.formatTime(res.data.uploadTime),
             hp_content: res.data.dinfo
           },
           serial: {
             praisenum: res.data.numLike,
             commentnum: res.data.comments.length,
           },
-          comments: res.data.comments,
+          comments: coms,
+          imageURLs: res.data.imageURLs
+        })
+        wx.setNavigationBarTitle({
+          title: res.data.dname,
         })
       }
-    });
+    });    
     console.log(this.data);
   },
 
@@ -114,7 +129,7 @@ Page({
         method: '',
         success: (res) => {
           wx.showToast({
-            title: '不想要了',
+            title: '从心愿单中移除',
             icon: "success",
             duration: 600,
             success: (res) => {
@@ -141,7 +156,7 @@ Page({
         method: 'POST',
         success: (res) => {
           wx.showToast({
-            title: '添加至我想要的',
+            title: '添加至心愿单',
             icon: "success",
             duration: 600,
             success: (res) => {

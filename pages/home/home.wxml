@@ -12,7 +12,7 @@
     </swiper>
     <view class='card-info'>
       <block>
-        <view class='sub-title'>雍物集\n</view>
+        <view class='sub-title'>南雍记\n</view>
         <view class="{{animated?'animated_title':'title'}}">{{title}}\n</view>
       </block>
     </view>
