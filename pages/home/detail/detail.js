@@ -18,6 +18,17 @@ Page({
     imageURLs: []
   },
   onLoad: function (options) {
+    //如果是通过扫码进入
+    if(options.q!=undefined){
+      var qrcode = decodeURIComponent(options.q)
+      console.log("扫码结果", qrcode)
+      //qrcode=http://nywcstatic.moontell.cn/FvKc9xFaIxK1taFqUBc3mSRMia9A
+      var vardkey=qrcode.substr(30);
+      console.log("扫码得到的dkey为：",vardkey);
+      options.dkey=vardkey
+    }
+
+
     let openId = app.globalData.openId;
     api.checkIsCollected({
       data: {
