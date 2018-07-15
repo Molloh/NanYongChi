@@ -170,7 +170,7 @@ Page({
                 serial: varserial
               })
             }
-          })
+          });
         }
       })
     }
