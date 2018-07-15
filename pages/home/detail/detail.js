@@ -86,6 +86,12 @@ Page({
     })
   },
 
+  toHome: function() {
+    wx.redirectTo({
+      url: '../../home/home',
+    })
+  },
+
   onTextAreaInput: function(e) {
     this.setData({
       commentValue: e.detail.value,

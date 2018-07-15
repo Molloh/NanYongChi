@@ -20,7 +20,10 @@
     <view class='share-wrapper'>
       <text class="text-title">全部评论</text>
       <!--港欢增加两个button  -->
-      <button class="share-btn" open-type="share" plain='true'>分享</button>
+      <view class='sub-wrapper'>
+        <button class="share-btn" plain='true' catchtap='toHome'>首页</button>
+        <button class="share-btn" open-type="share" plain='true'>分享</button>
+      </view>
     </view>
     <view class="split"></view>
     <view class="comment-list">
