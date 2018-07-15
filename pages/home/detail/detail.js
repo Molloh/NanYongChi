@@ -18,7 +18,7 @@ Page({
     imageURLs: []
   },
   onLoad: function (options) {
-    //如果是通过扫码进入
+    //如果是通过微信扫一扫扫码进入
     if(options.q!=undefined){
       var qrcode = decodeURIComponent(options.q)
       console.log("扫码结果", qrcode)

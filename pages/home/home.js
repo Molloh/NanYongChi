@@ -40,7 +40,7 @@ Page({
     wx.scanCode({
       success: (res) => {
         console.log("二维码内容为",res.result)
-        let id = res.result;
+        let id = res.result.substr(30);
 
         api.getCardByDkey({
           data:{
