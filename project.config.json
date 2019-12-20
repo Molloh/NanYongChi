@@ -15,6 +15,8 @@
 	"appid": "wxe0d46a8e26e9b3f7",
 	"projectname": "NanYongChi",
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
